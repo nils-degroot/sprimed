@@ -4,7 +4,7 @@ local beautiful = require("beautiful")
 local capi = { keygrabber = keygrabber }
 
 local title_font = "JetBrainsMono Nerd Font 12"
-local icon_path = os.getenv("HOME") .. "/.config/awesome/src/menu/logout-popup/"
+local icon_path = os.getenv("HOME") .. "/.config/awesome/sprimed/menu/logout-popup/"
 
 local default_text = "Uptime"
 
