@@ -1,5 +1,4 @@
 local awful = require("awful")
-local naughty = require("naughty")
 
 DfWidget = {
 	timeout = 15
@@ -17,14 +16,19 @@ function DfWidget:render_inner()
 		local i, from, to = 1, 1, 1
 
 		while true do
-			from, to = string.find(stdout, " %d-G", from + 1)
+			from, to = stdout:find(" %d-G", from + 1)
 			if i == 3 or from == nil then
 				break
 			end
 			i = i + 1
 		end
 
-		widget.markup = string.sub(stdout, from + 1, to)
+		if from == nil then
+			widget.markup = "Failed to find info"
+		else
+			widget.markup = stdout:sub(from + 1, to)
+		end
+
 	end)
 end
 

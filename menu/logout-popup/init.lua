@@ -80,7 +80,7 @@ local function launch(custom_config)
 				margins = 32,
 				layout = wibox.container.margin
 			},
-			bg = config.bg_normal,
+			bg = config.button_bg,
 			forced_height = 100,
 			forced_width = 100,
 			layout = wibox.container.background
