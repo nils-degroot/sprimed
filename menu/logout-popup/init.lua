@@ -20,10 +20,10 @@ local default_config = {
 	["button_lock_key"] = "l",
 	-- Buttons methods
 	["button_poweroff_hook"] = function()
-		awful.spawn("poweroff")
+		awful.spawn("sudo poweroff")
 	end,
 	["button_reboot_hook"] = function()
-		awful.spawn("reboot")
+		awful.spawn("sudo reboot")
 	end,
 	["button_lock_hook"] = function()
 		awful.spawn("lock")
