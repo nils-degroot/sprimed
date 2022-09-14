@@ -18,6 +18,7 @@ end
 TwoSidedBase = {
 	-- Left style
 	icon = "",
+	left_font = beautiful.font,
 	left_bg = beautiful.bg_focus,
 	left_margin_left = 5,
 	left_margin_right = 2,
@@ -41,6 +42,7 @@ function TwoSidedBase:render()
 		    {
 		        {
 		            markup = self.icon,
+					font = self.left_font,
 		            widget = wibox.widget.textbox
 		        },
 		        widget = wibox.container.margin,
